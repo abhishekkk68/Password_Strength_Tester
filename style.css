@@ -1,0 +1,107 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6d5bba, #8d58bf, #de67a3);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input[type="password"] {
+    padding: 10px 50px 10px 10px; /* Adjusted to make space for both icons */
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="password"]:focus {
+    border-color: #6d5bba;
+    outline: none;
+}
+
+.input-wrapper .fas {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    cursor: pointer;
+}
+
+.input-wrapper .fa-key {
+    right: 30px; /* Adjusted for correct positioning */
+}
+
+.input-wrapper .fa-eye {
+    right: 10px; /* Adjusted for correct positioning */
+}
+
+.strength-bar {
+    height: 10px;
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.5s, width 0.5s;
+}
+
+.strength-bar.low {
+    background-color: red;
+    width: 33%;
+}
+
+.strength-bar.medium {
+    background-color: orange;
+    width: 66%;
+}
+
+.strength-bar.high {
+    background-color: green;
+    width: 100%;
+}
+
+#strength-text {
+    font-weight: bold;
+    color: #333;
+}
+
+.instructions {
+    font-size: 0.9em;
+    color: #666;
+}
